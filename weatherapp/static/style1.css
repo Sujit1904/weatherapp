@@ -23,8 +23,10 @@ body {
     padding: 2rem;
     border-radius: 10px;
     color: rgb(5, 41, 51);
-    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
-    backdrop-filter: blur(10px); /* Apply a blur effect to the background */
+    background: rgba(255, 255, 255, 0.8);
+    /* Semi-transparent background */
+    backdrop-filter: blur(10px);
+    /* Apply a blur effect to the background */
     box-shadow: 0 4px 6px var(--shadow);
 }
 
@@ -41,7 +43,8 @@ form {
     grid-gap: 3%;
 }
 
-input, .btn::placeholder {
+input,
+.btn::placeholder {
     background-color: transparent;
     padding: .5rem;
     border-radius: 10px;
@@ -74,7 +77,8 @@ input, .btn::placeholder {
     height: auto;
 }
 
-.left, .right {
+.left,
+.right {
     width: 48%;
     padding: .3rem;
     border-radius: 10px;
@@ -122,14 +126,17 @@ input, .btn::placeholder {
         flex-direction: column;
         height: auto;
     }
+
     .container {
         text-align: center;
         width: 90%;
         height: auto;
     }
+
     .right {
         margin-top: .5rem;
     }
+
     form {
         grid-template-columns: 100%;
     }

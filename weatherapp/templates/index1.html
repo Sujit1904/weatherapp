@@ -2,6 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="{% static 'style1.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
         <h1 class="heading">Weather App</h1>
@@ -17,6 +19,9 @@
             <input type="text" name="city" placeholder="Enter City">
             <button type="submit" class="btn">Search</button>
         </form>
+        {% if custom_error_message %}
+        <p class="custom-error">{{ custom_error_message }}</p>
+        {% else %}
         <div class="weather">
             <div class="left">
                 <h2 class="temp">{{ temp }}&#176; C</h2>
@@ -29,11 +34,9 @@
                 </div>
             </div>
         </div>
-        {% if messages %}
-            <div class="error-message">
-                <p>{{ messages }}</p>
-            </div>
-        {% endif %}
+
     </div>
+    {% endif %}
 </body>
+
 </html>
